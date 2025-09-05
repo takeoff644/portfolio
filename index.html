@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paul Mwaniki Wainaina - ICT Portfolio</title>
+  <title>Paul Mwaniki - ICT Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
@@ -100,14 +100,58 @@
     .footer-grid ul li a:hover {color: var(--secondary);}
     .socials i {margin: 0 10px; font-size: 22px; transition: color 0.3s; cursor: pointer;}
     .socials i:hover {color: var(--secondary);}
+
+    /* Form Styling */
+    .php-email-form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    /* End of Form styling */
+
+    /* view pdf button */
+    .preview{
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
+    }
+
   </style>
 </head>
 <body>
-   <script src="script.php"></script>
 
   <!-- Navbar -->
   <nav>
-    <h1><i class="fas fa-laptop-code"></i> Paul Wainaina</h1>
+    <h1><i class="fas fa-laptop-code"></i> Paul Mwaniki</h1>
     <ul>
       <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
       <li><a href="#"><i class="fas fa-user"></i> About</a></li>
@@ -122,17 +166,14 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <h2>Hello, I'm <br><span style="color: var(--secondary);">Paul Mwaniki Wainaina</span></h2>
-        <p>An ICT professional passionate about networking, system development, database management, and modern web technologies. I focus on creating innovative, efficient, and secure ICT solutions for businesses and organizations.</p>
+        <h2>Hello, I'm <br><span style="color: var(--secondary);">Paul Mwaniki </span></h2>
   <div class="buttons">
   <button><i class="fas fa-file-download"></i> Download CV</button>
   <button><i class="fas fa-tasks"></i> All My Projects</button>
-  <button><i class="fas fa-check-circle"></i> Completed Projects</button>
-  <button><i class="fas fa-hourglass-half"></i> Pending Projects</button>
 </div>
 
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328eaa8d" alt="Paul Wainaina">
+        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328eaa8d" alt="Paul Mwaniki">
       </div>
     </div>
   </section>
@@ -142,34 +183,33 @@
     <img src="it.jpg" alt="About Me">
     <div class="about-text">
       <h3>About Me</h3>
-      <p>
-        I am an ICT specialist with extensive expertise in software development, networking, and database management.  
-        My passion lies in solving complex ICT challenges, building scalable systems, and helping organizations achieve digital transformation.  
-        I have worked on projects involving enterprise systems, web apps, and IT infrastructure, delivering solutions that are both secure and user-friendly.
-      </p>
+          <p>I'm a passionate cybersecurity student with a strong foundation in ;; ethical hacking, network security and penetration
+            testing. I leverage my academic knowledge alongside practical experience as a site manager to build secure systems and networks. My goal is to combine
+            technical expertise with a deep understanding of the ever-evolving threat landscape to ensure safety and protect valuable data.</p>
     </div>
   </section>
 
   <!-- Skills / Services -->
   <h2 class="section-title">My Skills & Services</h2>
   <section class="cards">
-    <div class="card"><i class="fas fa-code"></i><h4>Web Development</h4><p>Modern, responsive websites with professional UI/UX design.</p></div>
-    <div class="card"><i class="fas fa-network-wired"></i><h4>Networking</h4><p>Designing, configuring, and securing LAN/WAN infrastructures.</p></div>
+    <div class="card"><i class="fas fa-network-wired"></i><h4>Network Security</h4><p>Designing and implementing firewall rules, VPNs, and intrusion detection/prevention systems.</p></div>
     <div class="card"><i class="fas fa-database"></i><h4>Database Management</h4><p>SQL/NoSQL database solutions, optimization, and administration.</p></div>
-    <div class="card"><i class="fas fa-lock"></i><h4>Cyber Security</h4><p>Protecting systems against threats with advanced practices.</p></div>
-    <div class="card"><i class="fas fa-cloud"></i><h4>Cloud Computing</h4><p>Deployment and management of cloud services (AWS, Azure, GCP).</p></div>
-    <div class="card"><i class="fas fa-tools"></i><h4>IT Support & Troubleshooting</h4><p>Diagnosing and resolving hardware/software issues.</p></div>
-    <div class="card"><i class="fas fa-chalkboard-teacher"></i><h4>ICT Training</h4><p>Providing ICT training sessions for individuals and organizations.</p></div>
-    <div class="card"><i class="fas fa-mobile-alt"></i><h4>Mobile App Support</h4><p>Development and support of Android/iOS applications.</p></div>
+    <div class="card"><i class="fas fa-lock"></i><h4>Security Assessments and Audits</h4><p>Comprehensive reviews of security posture, compliance checks, and risk analysis.</p></div>
+    <div class="card"><i class="fas fa-tools"></i><h4>IT Support &amp Troubleshooting</h4><p>Diagnosing and resolving hardware/software issues.</p></div>
+    <div class="card"><i class="fas fa-tools"></i><h4>Penetration Testing </h4><p>Ethical hacking to identify vulnerabilities in systems, networks, and applications.</p></div>
   </section>
 
   <!-- Projects -->
   <section class="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
-      <div class="project"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f"><h4>System Development</h4><p>Enterprise-level systems for ICT management.</p></div>
-      <div class="project"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><h4>Networking Solutions</h4><p>Implementation of secure SME networks.</p></div>
-      <div class="project"><img src="it.jpg"><h4>Web Applications</h4><p>Custom web apps tailored to automate business workflows.</p></div>
+      <div class="project"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f"><h4>Risk Management Simulation on a Healthcare Organization</h4><p>The risk management process is a systematic approach used to identify, assess, and mitigate risks that could negatively impact an organization’s operations, assets, or stakeholders.</p>
+      <button class="preview" data-src="assets/report.pdf">View PDF</button>
+        </div>
+
+      <div class="project"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><h4>LAMP Stack Project</h4><p>As a cybersecurity student, building a web application using the LAMP Stack was a valuable exercise in applying both development and security principles. I used the LAMP stack to set up my application: Linux for the server environment, Apache as the web server, MySQL for the database, and PHP for dynamic content.</p></div>
+
+      <div class="project"><img src="it.jpg"><h4>Threat Detection using Splunk</h4><p>As part of my cybersecurity projects, I utilized Splunk's SIEM capabilities for threat detection by leveraging my intermediate knowledge gained through TryHackMe. Using Splunk Enterprise Security, I developed tailored dashboards and configured detection rules to monitor and analyze log data from various sources in near real-time.</p></div>
     </div>
   </section>
 
@@ -181,13 +221,27 @@
   </section>
 
   <!-- Contact -->
+  <!-- hapa tuliambiwa tusieke number ya simu ama email -->
+  <!-- hapa ni form itakua na nimeandika backend ya hio contact.php -->
   <section class="contact">
     <h2 class="section-title">Get In Touch</h2>
     <div class="contact-info">
-      <div><i class="fas fa-envelope"></i><p>Email: paulwainaina@gmail.com</p></div>
-      <div><i class="fas fa-phone"></i><p>Phone: +254 757 256453</p></div>
-      <div><i class="fas fa-map-marker-alt"></i><p>Nairobi, Kenya</p></div>
-    </div>
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+          
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+
+                  <button type="submit">Send Message</button>
+            </form>
+          </div><!-- End Contact Form -->
   </section>
 
   <!-- Footer -->
@@ -197,10 +251,284 @@
       <div><h4>Navigation</h4><ul><li><a href="#">Home</a></li><li><a href="#">Services</a></li><li><a href="#">Projects</a></li></ul></div>
       <div><h4>Follow Me</h4><div class="socials"><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin"></i><i class="fab fa-github"></i><i class="fab fa-instagram"></i></div></div>
     </div>
-    <p style="text-align:center; margin-top:20px;">&copy; 2025 Paul Mwaniki Wainaina. All Rights Reserved.</p>
+    <p style="text-align:center; margin-top:20px;">&copy; 2025 Paul Mwaniki . All Rights Reserved.</p>
   </footer>
 
+    <script>
+      const pdfButtons = document.querySelectorAll('.preview'); // Selects all buttons with class "preview"
+      pdfButtons.forEach(preview => {
+        preview.addEventListener('click', () => {
+          const src = preview.dataset.src; // Get the PDF source URL from the dataset
+          window.open(src, '_blank'); // Opens the pdf in a new blank page
+        });
+      });
+    </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Mwaniki - ICT Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #111;}
+    a {text-decoration: none; color: inherit;}
+    img {max-width: 100%; border-radius: 10px;}
 
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #dc143c;
+      --light: #fff;
+      --dark: #111;
+    }
 
+    /* Navbar */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 50px; background: var(--primary); position: sticky; top: 0; z-index: 1000;
+    }
+    nav h1 {font-size: 26px; font-weight: bold; color: #fff;}
+    nav ul {list-style: none; display: flex; gap: 25px;}
+    nav ul li a {color: #fff; transition: color 0.3s;}
+    nav ul li a:hover {color: var(--secondary);}
+
+    /* Hero */
+    .hero {
+      height: 90vh; display: flex; align-items: center; justify-content: space-between;
+      padding: 50px; background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center/cover;
+    }
+    .hero-content {
+      display: flex; align-items: center; justify-content: space-between; width: 100%;
+    }
+    .hero-text {
+      background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 15px; max-width: 600px;
+      color: var(--dark);
+    }
+    .hero-text h2 {font-size: 48px; margin-bottom: 15px;}
+    .hero-text p {font-size: 18px; margin-bottom: 25px; line-height: 1.6;}
+    .hero-text button {
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
+    }
+    .hero-text button:hover {background: #ff4d6d;}
+    .hero-photo img {width: 380px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
+
+    /* About */
+    .about {display: flex; gap: 40px; padding: 80px 50px; background: #fff; color: var(--dark);}
+    .about img {width: 350px; border-radius: 20px;}
+    .about-text h3 {font-size: 36px; color: var(--primary); margin-bottom: 20px;}
+    .about-text p {font-size: 18px; line-height: 1.8;}
+
+    /* Services / Skills */
+    .section-title {text-align: center; margin: 60px 0 30px; font-size: 36px; color: var(--primary);}
+    .cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding: 0 50px 80px;}
+    .card {
+      background: #fff; padding: 30px; border-radius: 15px; text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {transform: translateY(-10px); box-shadow: 0 6px 20px rgba(0,0,0,0.2);}
+    .card i {font-size: 45px; margin-bottom: 20px; color: var(--secondary);}
+    .card h4 {margin-bottom: 15px; font-size: 22px;}
+
+    /* Projects */
+    .projects {padding: 60px 50px; background: #f9f9f9;}
+    .projects-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;}
+    .project {background: #fff; padding: 20px; border-radius: 15px; transition: transform 0.3s;}
+    .project:hover {transform: scale(1.05);}
+    .project img {border-radius: 12px; margin-bottom: 15px;}
+    .project h4 {color: var(--primary);}
+
+    /* Testimonials */
+    .testimonials {padding: 60px 50px; background: var(--primary);}
+    .testimonial-card {
+      background: #fff; color: var(--dark); padding: 25px; border-radius: 15px; margin: 15px auto; max-width: 700px;
+      text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .testimonial-card i {font-size: 30px; color: var(--secondary); margin-bottom: 15px;}
+    .testimonial-card h4 {margin-top: 15px; color: var(--primary);}
+
+    /* Contact */
+    .contact {padding: 80px 50px; background: #fff;}
+    .contact-info {display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;}
+    .contact-info div {text-align: center;}
+    .contact-info i {font-size: 35px; color: var(--secondary); margin-bottom: 10px;}
+
+    /* Footer */
+    footer {background: var(--dark); color: #ccc; padding: 50px;}
+    .footer-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; text-align: center;
+    }
+    .footer-grid h4 {margin-bottom: 15px; color: var(--light);}
+    .footer-grid ul {list-style: none;}
+    .footer-grid ul li {margin: 8px 0;}
+    .footer-grid ul li a:hover {color: var(--secondary);}
+    .socials i {margin: 0 10px; font-size: 22px; transition: color 0.3s; cursor: pointer;}
+    .socials i:hover {color: var(--secondary);}
+
+    /* Form Styling */
+    .php-email-form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    /* End of Form styling */
+
+    /* view pdf button */
+    .preview{
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1><i class="fas fa-laptop-code"></i> Paul Mwaniki</h1>
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#"><i class="fas fa-cogs"></i> Services</a></li>
+      <li><a href="#"><i class="fas fa-briefcase"></i> Projects</a></li>
+      <li><a href="#"><i class="fas fa-users"></i> Testimonials</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Hello, I'm <br><span style="color: var(--secondary);">Paul Mwaniki </span></h2>
+  <div class="buttons">
+  <button><i class="fas fa-file-download"></i> Download CV</button>
+  <button><i class="fas fa-tasks"></i> All My Projects</button>
+</div>
+
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328eaa8d" alt="Paul Mwaniki">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <img src="it.jpg" alt="About Me">
+    <div class="about-text">
+      <h3>About Me</h3>
+          <p>I'm a passionate cybersecurity student with a strong foundation in ;; ethical hacking, network security and penetration
+            testing. I leverage my academic knowledge alongside practical experience as a site manager to build secure systems and networks. My goal is to combine
+            technical expertise with a deep understanding of the ever-evolving threat landscape to ensure safety and protect valuable data.</p>
+    </div>
+  </section>
+
+  <!-- Skills / Services -->
+  <h2 class="section-title">My Skills & Services</h2>
+  <section class="cards">
+    <div class="card"><i class="fas fa-network-wired"></i><h4>Network Security</h4><p>Designing and implementing firewall rules, VPNs, and intrusion detection/prevention systems.</p></div>
+    <div class="card"><i class="fas fa-database"></i><h4>Database Management</h4><p>SQL/NoSQL database solutions, optimization, and administration.</p></div>
+    <div class="card"><i class="fas fa-lock"></i><h4>Security Assessments and Audits</h4><p>Comprehensive reviews of security posture, compliance checks, and risk analysis.</p></div>
+    <div class="card"><i class="fas fa-tools"></i><h4>IT Support &amp Troubleshooting</h4><p>Diagnosing and resolving hardware/software issues.</p></div>
+    <div class="card"><i class="fas fa-tools"></i><h4>Penetration Testing </h4><p>Ethical hacking to identify vulnerabilities in systems, networks, and applications.</p></div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+      <div class="project"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f"><h4>Risk Management Simulation on a Healthcare Organization</h4><p>The risk management process is a systematic approach used to identify, assess, and mitigate risks that could negatively impact an organization’s operations, assets, or stakeholders.</p>
+      <button class="preview" data-src="assets/report.pdf">View PDF</button>
+        </div>
+
+      <div class="project"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><h4>LAMP Stack Project</h4><p>As a cybersecurity student, building a web application using the LAMP Stack was a valuable exercise in applying both development and security principles. I used the LAMP stack to set up my application: Linux for the server environment, Apache as the web server, MySQL for the database, and PHP for dynamic content.</p></div>
+
+      <div class="project"><img src="it.jpg"><h4>Threat Detection using Splunk</h4><p>As part of my cybersecurity projects, I utilized Splunk's SIEM capabilities for threat detection by leveraging my intermediate knowledge gained through TryHackMe. Using Splunk Enterprise Security, I developed tailored dashboards and configured detection rules to monitor and analyze log data from various sources in near real-time.</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="section-title" style="color:#fff;">Testimonials</h2>
+    <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>“Paul delivered our ICT system on time and with excellent professionalism. Highly recommend his services.”</p><h4>- Madam Dammaris MULWA</h4></div>
+    <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>“The networking solutions were secure and reliable. Paul is truly an ICT expert.”</p><h4>- Victor Gachango</h4></div>
+  </section>
+
+  <!-- Contact -->
+  <!-- hapa tuliambiwa tusieke number ya simu ama email -->
+  <!-- hapa ni form itakua na nimeandika backend ya hio contact.php -->
+  <section class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-info">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+          
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+
+                  <button type="submit">Send Message</button>
+            </form>
+          </div><!-- End Contact Form -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div><h4>About</h4><ul><li><a href="#">Who I Am</a></li><li><a href="#">My Skills</a></li><li><a href="#">Experience</a></li></ul></div>
+      <div><h4>Navigation</h4><ul><li><a href="#">Home</a></li><li><a href="#">Services</a></li><li><a href="#">Projects</a></li></ul></div>
+      <div><h4>Follow Me</h4><div class="socials"><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin"></i><i class="fab fa-github"></i><i class="fab fa-instagram"></i></div></div>
+    </div>
+    <p style="text-align:center; margin-top:20px;">&copy; 2025 Paul Mwaniki . All Rights Reserved.</p>
+  </footer>
+
+    <script>
+      const pdfButtons = document.querySelectorAll('.preview'); // Selects all buttons with class "preview"
+      pdfButtons.forEach(preview => {
+        preview.addEventListener('click', () => {
+          const src = preview.dataset.src; // Get the PDF source URL from the dataset
+          window.open(src, '_blank'); // Opens the pdf in a new blank page
+        });
+      });
+    </script>
+</body>
+</html>
