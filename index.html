@@ -133,14 +133,14 @@
       margin-bottom: 15px;
     }
 
-    .php-email-form input[type="submit"] {
+    .php-email-form button[type="submit"] {
       padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
       font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
       text-align: center;
       text-decoration: none;
       display: inline-block;
     }
-    .php-email-form input[type="submit"]:hover {background: #ff4d6d;}
+    .php-email-form button[type="submit"]:hover {background: #ff4d6d;}
     /* End of Form styling */
 
     /* view pdf button */
@@ -154,6 +154,7 @@
   .iframe-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;  /* vertical alignment, but only within container height */
     align-items: center;     /* horizontally centers */
     margin: 20px 0;
   }
