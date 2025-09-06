@@ -150,6 +150,12 @@
     }
     .preview:hover {background: #ff4d6d;}
 
+    /* styling the badges from tryhackme */
+  .iframe-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    margin: 20px 0;
+  }
   </style>
 </head>
 <body>
@@ -247,7 +253,10 @@
     </section>
 
     <!-- Tryhackme data -->
-    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4408819" style='border:none;'></iframe>
+    <div class="iframe-container">
+      <p> Live preview of tryhackme </p>
+      <iframe  src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4408819" style='border:none;'></iframe>
+    </div>
   <!-- Testimonials -->
   <section class="testimonials">
     <h2 class="section-title" style="color:#fff;">Testimonials</h2>
@@ -268,7 +277,7 @@
           <i class="fab fa-github"></i>
         </div>
     <div class="contact-info">
-            <form action="contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+        <form action="contact.php" method="post" class="php-email-form" >
                   <label for="name-field" class="pb-2">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
           
