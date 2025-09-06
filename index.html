@@ -126,21 +126,18 @@
       margin-bottom: 15px;
     }
 
-    input[type="submit"] {
-      background-color: #4CAF50;
-      border: none;
+    input[type="submit"] button:hover {background: #ff4d6d;}{
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
       color: white;
-      padding: 12px 20px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
-      border-radius: 4px;
     }
     /* End of Form styling */
 
     /* view pdf button */
-    .preview{
+    .preview button:hover {background: #ff4d6d;}{
       padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
       font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
     }
@@ -199,7 +196,7 @@
     <div class="card"><i class="fas fa-tools"></i><h4>Penetration Testing </h4><p>Ethical hacking to identify vulnerabilities in systems, networks, and applications.</p></div>
   </section>
 
-  <!-- Projects -->
+  <!-- My Projects -->
   <section class="projects">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
@@ -207,7 +204,9 @@
       <button class="preview" data-src="assets/report.pdf">View PDF</button>
         </div>
 
-      <div class="project"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><h4>LAMP Stack Project</h4><p>As a cybersecurity student, building a web application using the LAMP Stack was a valuable exercise in applying both development and security principles. I used the LAMP stack to set up my application: Linux for the server environment, Apache as the web server, MySQL for the database, and PHP for dynamic content.</p></div>
+        <div class="project"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"><h4>LAMP Stack Project</h4><p>As a cybersecurity student, building a web application using the LAMP Stack was a valuable exercise in applying both development and security principles. I used the LAMP stack to set up my application: Linux for the server environment, Apache as the web server, MySQL for the database, and PHP for dynamic content.</p>
+          <button class="preview" data-src="./assets/NET300 - Web Presentation.pdf">View PDF</button>
+        </div>
 
       <div class="project"><img src="https://images.unsplash.com/photo-1655036387197-566206c80980"><h4>Threat Detection using Splunk</h4><p>As part of my cybersecurity projects, I utilized Splunk's SIEM capabilities for threat detection by leveraging my intermediate knowledge gained through TryHackMe. Using Splunk Enterprise Security, I developed tailored dashboards and configured detection rules to monitor and analyze log data from various sources in near real-time.</p></div>
     </div>
