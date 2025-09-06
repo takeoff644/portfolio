@@ -98,6 +98,13 @@
     .footer-grid ul {list-style: none;}
     .footer-grid ul li {margin: 8px 0;}
     .footer-grid ul li a:hover {color: var(--secondary);}
+    .socials{
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      align-items: center;    /* center horizontally */
+      text-align: center;     /* center text inside */
+      gap: 10px;              /* space between items */
+    }
     .socials i {margin: 0 10px; font-size: 22px; transition: color 0.3s; cursor: pointer;}
     .socials i:hover {color: var(--secondary);}
 
@@ -126,7 +133,6 @@
       margin-bottom: 15px;
     }
 
-    input[type="submit"] button:hover {background: #ff4d6d;}
     input[type="submit"] {
       padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
       font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
@@ -135,14 +141,15 @@
       text-decoration: none;
       display: inline-block;
     }
+    input[type="submit"] button:hover {background: #ff4d6d;}
     /* End of Form styling */
 
     /* view pdf button */
-    .preview button:hover {background: #ff4d6d;}
     .preview {
       padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
       font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
     }
+    .preview button:hover {background: #ff4d6d;}
 
   </style>
 </head>
@@ -254,10 +261,8 @@
   <!-- hapa ni form itakua na nimeandika backend ya hio contact.php -->
   <section class="contact">
     <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-info">
-      <p>Feel free to reach out....</p>
-      <div>
         <div class="socials">
+          <p>Feel free to reach out....</p>
           <i class="fab fa-facebook"></i>
           <i class="fab fa-twitter"></i>
           <a href="https://www.linkedin.com/in/paul-mwaniki-819154368" target="_blank" rel="noopener noreferrer">
@@ -266,7 +271,7 @@
           <i class="fab fa-github"></i>
           <i class="fab fa-instagram"></i>
         </div>
-      </div>
+    <div class="contact-info">
             <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                   <label for="name-field" class="pb-2">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
