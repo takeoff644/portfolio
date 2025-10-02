@@ -1,0 +1,472 @@
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    :root {
+	    --dark: #6c757d;
+	    --umber: #ffc300;
+	    --primary: #3d405b;
+	    --secondary: #264653;
+	    --light: #219ebc;
+
+    }
+    body { margin:0; overflow-x:hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #111; background: var(--dark);}
+    a {text-decoration: none; color: inherit;}
+    img {max-width: 100%; border-radius: 10px;}
+
+
+    /* Navbar */
+    .nav-toggle {
+	    display: none;
+    }
+
+    /* Nav styles */
+    nav {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding: 15px 50px;
+	    background: var(--primary);
+	    position: sticky;
+	    top: 0;
+	    z-index: 1000;
+	    color: white;
+    }
+
+    /* Navigation list default */
+    nav ul {
+	    list-style: none;
+	    display: flex;
+	    gap: 25px;
+    }
+
+    nav ul li a {
+	    color: white;
+	    text-decoration: none;
+	    transition:color 0.3s;
+    }
+    nav ul li a:hover {color: var(--umber);}
+
+
+    /* Hamburger button - hidden on desktop */
+    .nav-toggle-label {
+	    display: none;
+	    cursor: pointer;
+	    width: 30px;
+	    height: 25px;
+	    position: relative;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+	    display: block;
+	    background: white;
+	    position: absolute;
+	    height: 3px;
+	    width: 100%;
+	    border-radius: 3px;
+	    transition: all 0.3s ease;
+    }
+
+    .nav-toggle-label span {
+	    top: 50%;
+	    transform: translateY(-50%);
+    }
+
+    .nav-toggle-label span::before {
+	    content: "";
+	    top: -10px;
+    }
+
+    .nav-toggle-label span::after {
+	    content: "";
+	    top: 10px;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh; display: flex; align-items: center; justify-content: space-between;
+      padding: 50px; 
+    }
+    .hero-content {
+      display: flex; align-items: center; justify-content: space-between; width: 100%;
+    }
+    .hero-text {
+      background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 15px; max-width: 600px; display:flex; justify-content:space-between;
+      color: var(--dark);
+    }
+    .hero-text h2 {font-size: 48px; margin-bottom: 15px;}
+    .hero-text p {font-size: 18px; margin-bottom: 25px; line-height: 1.6;}
+    .hero-text button {
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff; margin-bottom:1em;
+    }
+    .hero-text button:hover {background: var(--umber);}
+    .hero-photo img {width: 380px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
+
+    /* About */
+    .about {display: flex; gap: 40px; padding: 80px 50px; background: #fff; color: var(--dark);}
+    .about img {width: 350px; border-radius: 20px;}
+    .about-text h3 {font-size: 36px; color: var(--primary); margin-bottom: 20px;}
+    .about-text p {font-size: 18px; line-height: 1.8;}
+
+    /* Services / Skills */
+    #skills{ padding: 80px 50px; }
+    .section-title {text-align: center; margin: 60px 0 30px; font-size: 36px; color: var(--primary);}
+    .cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding: 0 50px 80px;}
+    .card {
+      background: #fff; padding: 30px; border-radius: 15px; text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {transform: translateY(-10px); box-shadow: 0 6px 20px var(--umber);}
+    .card i {font-size: 45px; margin-bottom: 20px; color: var(--secondary);}
+    .card h4 {margin-bottom: 15px; font-size: 22px;}
+
+    /* Projects */
+    .projects {padding: 60px 50px; background: #f9f9f9;}
+    .projects-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;}
+    .project {background: #fff; padding: 20px; border-radius: 15px; transition: transform 0.3s;}
+    .project:hover {transform: scale(1.05);}
+    .project img {border-radius: 12px; margin-bottom: 15px;}
+    .project h4 {color: var(--primary);}
+
+    /* Testimonials */
+    .testimonials {padding: 60px 50px; background: var(--primary);}
+    .testimonial-card {
+      background: #fff; color: var(--dark); padding: 25px; border-radius: 15px; margin: 15px auto; max-width: 700px;
+      text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .testimonial-card i {font-size: 30px; color: var(--secondary); margin-bottom: 15px;}
+    .testimonial-card h4 {margin-top: 15px; color: var(--primary);}
+
+    /* Contact */
+    .php-email-form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+   .contact {padding: 80px 50px; background: #fff;}
+    .contact-info {display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;}
+    .contact-info div {text-align: center;}
+    .contact-info i {font-size: 35px; color: var(--secondary); margin-bottom: 10px;}
+
+    /* Footer */
+    footer {background: var(--primary); color: #ccc; padding: 50px;}
+    .footer-grid {
+      display:flex; justify-content:space-between; max-width:40vw; margin:0 auto; text-align:center;
+    }
+    .footer-grid h4 {margin-bottom: 15px; color: var(--light);}
+    .footer-grid ul {  padding:0; margin:0; list-style:none; }
+    .footer-grid ul li { margin: 0; padding:0;}
+    .footer-grid ul li a:hover {color: var(--umber);}
+    .socials{
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      align-items: center;    /* center horizontally */
+      text-align: center;     /* center text inside */
+      gap: 10px;              /* space between items */
+    }
+    .socials i {margin: 0 10px; font-size: 22px; transition: color 0.3s; cursor: pointer;}
+    .socials i:hover {color: var(--umber);}
+
+
+    /* Form Styling */
+   .php-email-form {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    .php-email-form button[type="submit"] {
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .php-email-form button[type="submit"]:hover {background: var(--umber);}
+    /* End of Form styling */
+
+    /* view pdf button */
+    .preview {
+      padding: 14px 28px; background: var(--secondary); border: none; border-radius: 30px;
+      font-size: 18px; cursor: pointer; transition: background 0.3s; color: #fff;
+    }
+    .preview:hover {background: var(--umber);}
+
+    /* styling the badges from tryhackme */
+  .iframe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical alignment, but only within container height */
+    align-items: center;     /* horizontally centers */
+    margin: 20px 0;
+  }
+
+  /* MOBILE STYLING */
+  @media (max-width: 600px) {
+	  /* NAV */
+	  nav {
+		  padding: 10px 10px;
+		  font-size:11px;
+	  }
+	  nav ul {
+		  position: absolute;
+		  top: 60px;
+		  left: 0;
+		  right: 0;
+		  background: var(--primary);
+		  flex-direction: column;
+		  gap: 15px;
+		  font-size:14px;
+		  padding: 15px 0;
+		  display: none; /* hide by default */
+	  }
+	  /* Show toggle */
+	  .nav-toggle-label {
+		  display: block;
+	  }
+	  /* Show menu when checkbox checked */
+	  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+		  display: flex;
+	  }
+
+	  nav ul li a {
+		  color: white;
+		  padding: 10px 20px;
+	  }
+	  /* HERO */
+	  .hero {
+		  height: auto;               /* allow height to adjust based on content */
+		  padding: 20px 15px;         /* reduce padding */
+		  flex-direction: column;     /* stack hero-text and hero-photo vertically */
+		  align-items: center;
+		  justify-content: center;
+		  background-position: center;
+		  background-size: cover;     /* ensure background covers container */
+	  }
+
+	  .hero-content {
+		  flex-direction: column;
+		  width: 100%;
+		  gap: 20px;                  /* space between hero-text and hero-photo */
+		  align-items: center;
+	  }
+
+	  .hero-text {
+		  max-width: 100%;
+		  padding: 20px;
+		  border-radius: 15px;
+		  background: rgba(255, 255, 255, 0.95); /* slightly more opaque for readability */
+		  color: var(--dark);
+		  text-align: center;
+	  }
+
+	  .hero-text h2 {
+		  font-size: 28px;            /* reduce heading size */
+		  margin-bottom: 10px;
+	  }
+
+	  .hero-text p {
+		  font-size: 14px;            /* smaller paragraph font */
+		  margin-bottom: 15px;
+		  line-height: 1.4;
+	  }
+
+	  .hero-text button {
+		  width: 100%;
+		  padding: 12px 0;
+		  font-size: 16px;
+	  }
+
+	  .hero-photo img {
+		  width: 100%;
+		  max-width: 320px;           /* smaller image size */
+		  border-radius: 20px;
+		  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+	  }
+
+	  /* ABOUT */
+	  .about {
+		  display: flex;
+		  flex-direction: column;  /* stack image and text vertically */
+		  gap: 20px;               /* spacing between image and text */
+		  padding: 40px 20px;      /* reduced padding for mobile */
+		  text-align: center;      /* center text */
+	  }
+
+	  .about img {
+		  width: 100%;             /* full width image */
+		  max-width: 300px;        /* max width for readability */
+		  margin: 0 auto;          /* center the image */
+		  border-radius: 20px;
+	  }
+
+	  .about-text h3 {
+		  font-size: 28px;         /* smaller heading */
+		  color: var(--primary);
+		  margin-bottom: 15px;
+	  }
+
+	  .about-text p {
+		  font-size: 16px;         /* easier to read on smaller screens */
+		  line-height: 1.6;
+	  }
+
+	  /* SKILLS AND SERVICES */
+	  .section-title {
+		  font-size: 28px;     /* reduce title font size */
+		  margin: 40px 0 20px; /* smaller margin */
+		  padding: 0 10px;     /* add horizontal padding */
+	  }
+
+	  .cards {
+		  display: flex;
+		  flex-direction: column; /* stack cards vertically */
+		  padding: 0 20px 40px;
+		  gap: 20px;               /* vertical gap between cards */
+	  }
+
+	  .card {
+		  padding: 20px;           /* reduce padding */
+		  border-radius: 12px;
+		  text-align: center;
+		  transition: none;        /* disable hover transform on mobile */
+		  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	  }
+
+	  .card:hover {
+		  transform: none;         /* disable hover effect */
+		  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	  }
+
+	  .card i {
+		  font-size: 36px;         /* smaller icon size */
+		  margin-bottom: 15px;
+		  color: var(--secondary);
+	  }
+
+	  .card h4 {
+		  font-size: 18px;         /* smaller heading */
+		  margin-bottom: 10px;
+	  }
+
+	  /* PROJECTS */
+	  .projects {
+		  padding: 30px 20px; /* reduced padding for mobile */
+	  }
+	  .projects-grid {
+		  display: flex;
+		  flex-direction: column; /* stack projects vertically */
+		  gap: 15px;              /* smaller gap on mobile */
+	  }
+	  .project {
+		  padding: 15px;
+		  border-radius: 12px;
+		  transition: transform 0.3s;
+		  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	  }
+	  .project:hover {
+		  transform: none; /* disable scaling on hover for mobile */
+	  }
+	  .project img {
+		  width: 100%;
+		  border-radius: 12px;
+		  margin-bottom: 12px;
+	  }
+	  .project h4 {
+		  color: var(--primary);
+		  font-size: 18px;
+	  }
+	  /* TESTIMONIALS */
+	  .testimonials {
+		  padding: 30px 20px; /* reduce padding for mobile */
+	  }
+
+	  .testimonial-card {
+		  max-width: 100%;             /* full width */
+		  margin: 15px auto;           /* center horizontally */
+		  padding: 20px;               /* slightly smaller padding */
+		  border-radius: 15px;
+		  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+		  text-align: center;
+	  }
+
+	  .testimonial-card i {
+		  font-size: 24px;             /* smaller icon */
+		  margin-bottom: 12px;
+	  }
+
+	  .testimonial-card h4 {
+		  margin-top: 12px;
+		  color: var(--primary);
+		  font-size: 20px;             /* slightly smaller heading */
+	  }
+	  /* CONTACT */
+	  .contact {
+		  padding: 40px 20px; /* Reduce padding for smaller screens */
+	  }
+
+	  .contact-info {
+		  display: flex;
+		  flex-direction: column; /* stack the contact info vertically */
+		  align-items: center;    /* center horizontally */
+		  gap: 20px;              /* spacing between items */
+	  }
+
+	  .contact-info div {
+		  width: 100%;            /* take full width */
+		  max-width: 300px;       /* optional max width for better readability */
+		  text-align: center;     /* center text */
+	  }
+
+	  .contact-info i {
+		  font-size: 28px;        /* slightly smaller icons for mobile */
+		  margin-bottom: 8px;
+	  }
+	  .php-email-form {
+		  width: 100%;         /* use full width of mobile screen */
+		  max-width: 100%;     /* ensure it doesn't exceed screen */
+		  padding: 15px 10px;  /* reduce padding for smaller screens */
+		  box-sizing: border-box; /* include padding in width calculation */
+	  }
+
+	  /* FOOTER */
+	  .footer-grid {
+		  display: flex;
+		  flex-direction: column;
+		  gap: 15px;
+		  text-align: center;
+	  }
+	  .footer-grid ul {
+		  padding: 0; /* remove default padding */
+		  margin: 0; /* remove default margin */
+		  list-style: none; /* keep no bullets */
+	  }
+
+	  .footer-grid ul li {
+		  margin: 0 10px; /* spacing between items */
+		  padding: 0; /* reset padding if any */
+	  }
+  }
+
+  </style>
+
